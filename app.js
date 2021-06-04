@@ -32,14 +32,14 @@ g.append('path')
 //  console.log(uk);
 //});
 
-d3.json("countries-110m.json")
+d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json')
   .then((data) => {
     console.log(data);
     // build map here since it is async and this waits for load??
-    const countries = topojson.feature(data, data.objects.countries);
-    g.selectAll('path').data(countries.features)
-        .enter().append('path')
-            .attr('d', pathGenerator);
+    //const countries = topojson.feature(data, data.objects.countries);
+    //g.selectAll('path').data(countries.features)
+    //    .enter().append('path')
+    //        .attr('d', pathGenerator);
   })
   .catch((error) => {
     console.error("Error loading the data");
