@@ -15,11 +15,18 @@ path = d3.geoPath(projection);
 //  .enter().append("path")
 //    .attr("d", d3.geoPath());
 
-d3.json("countries-110m.json", function(error, uk) {
-  if (error) return console.error(error);
-  console.log(uk);
-});
+//d3.json("countries-110m.json", function(error, uk) {
+//  if (error) return console.error(error);
+//  console.log(uk);
+//});
 
+d3.json("countries-110m.json")
+  .then((data) => {
+    console.log(data.length);
+  })
+  .catch((error) => {
+    console.error("Error loading the data");
+  });
 
 // topojson.feature converts topojson to geojson (which d3 requires)
 // see: https://github.com/topojson/topojson-client/blob/master/README.md#feature
