@@ -10,9 +10,9 @@ const pathGenerator = d3.geoPath().projection(projection);
 
 const g = svg.append('g');
 
-svg.call(zoom().on('zoom', () => {
-  g.attr('transform', event.transform);
-}));
+//svg.call(zoom().on('zoom', () => {
+//  g.attr('transform', event.transform);
+//}));
 
 g.append('path')
     .attr('class', 'sphere')
