@@ -23,6 +23,7 @@ path = d3.geoPath(projection);
 d3.json("countries-110m.json")
   .then((data) => {
     console.log(data.length);
+    // build map here since it is async and this waits for load??
   })
   .catch((error) => {
     console.error("Error loading the data");
