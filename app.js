@@ -1,5 +1,3 @@
-<script src="https://unpkg.com/topojson@3"></script>
-
 var width = 960,
     height = 1160;
 
