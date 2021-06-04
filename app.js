@@ -12,6 +12,10 @@ const svg = select('svg');
 
 const g = svg.append('g');
 
+svg.call(zoom().on('zoom', () => {
+  g.attr('transform', event.transform);
+}));
+
 g.append('path')
     .attr('class', 'sphere')
     .attr('d', pathGenerator({type: 'Sphere'}));
