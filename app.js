@@ -8,15 +8,15 @@ const svg = d3.select("body").append("svg")
 const projection = d3.geoEqualEarth();
 const pathGenerator = d3.geoPath().projection(projection);
 
-const g = svg.append('g');
+//const g = svg.append('g');
 
 //svg.call(zoom().on('zoom', () => {
 //  g.attr('transform', event.transform);
 //}));
 
-g.append('path')
-    .attr('class', 'sphere')
-    .attr('d', pathGenerator({type: 'Sphere'}));
+//g.append('path')
+//    .attr('class', 'sphere')
+//    .attr('d', pathGenerator({type: 'Sphere'}));
 
 //var topology = topojson.topology({foo: geojson});
 
@@ -32,6 +32,7 @@ g.append('path')
 
 d3.json('https://unpkg.com/world-atlas@1.1.4/world/110m.json')
   .then((data) => {
+    console.log("json worked!");
     console.log(data);
     // build map here since it is async and this waits for load??
     //const countries = topojson.feature(data, data.objects.countries);
