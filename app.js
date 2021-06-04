@@ -1,14 +1,12 @@
 const width = 960;
 const height = 1160;
 
-var svg = d3.select("body").append("svg")
+const svg = d3.select("body").append("svg")
     .attr("width", width)
     .attr("height", height);
 
 const projection = d3.geoEqualEarth();
 const pathGenerator = d3.geoPath().projection(projection);
-
-const svg = select('svg');
 
 const g = svg.append('g');
 
