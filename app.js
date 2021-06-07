@@ -8,11 +8,11 @@ const svg = d3.select("body").append("svg")
 const projection = d3.geoEqualEarth();
 const pathGenerator = d3.geoPath().projection(projection);
 
-//const g = svg.append('g');
+const g = svg.append('g');
 
-//svg.call(zoom().on('zoom', () => {
-//  g.attr('transform', event.transform);
-//}));
+svg.call(d3.zoom().on('zoom', () => {
+  g.attr('transform', event.transform);
+}));
 
 //g.append('path')
 //    .attr('class', 'sphere')
